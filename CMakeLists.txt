@@ -6,7 +6,7 @@ enable_language(C ASM)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fno-strict-aliasing -O2 -Wall -export-dynamic -pipe  -D_GNU_SOURCE -D_REENTRANT -fPIC -Wno-deprecated -m64")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fno-strict-aliasing -O2 -Wall -pipe  -D_GNU_SOURCE -D_REENTRANT -fPIC -Wno-deprecated -m64")
 
 set_source_files_properties(coctx_swap.S PROPERTIES COMPILE_FLAGS "-x assembler-with-cpp")
 set(DIR_SRCS co_epoll.cpp co_routine.cpp co_hook_sys_call.cpp coctx_swap.S coctx.cpp)
